@@ -3,442 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varadhi farms</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>My_Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-         body{
-            padding: 0px;
-            margin: 0px;
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+        html,body{
+            padding: 0%;
+            margin: 0%;
+            width:  100%; 
             box-sizing: border-box;
         }
         .parent{
             display: flex;
-            width: 100vw;
             flex-direction: column;
-        
         }
-        .heading1{}
-        .heading2{
+        .header{
             display: flex;
+            padding-left: 60px; 
+            padding-right: 60px;
+            padding-top: 25px;
+            padding-bottom: 15px;
+            justify-content: space-between;
+            align-items: center; 
+            background-color: white;
+            position: sticky;
+            margin-top: 0%;    
+        }
+        .profile_pic{
+            display: flex;
+            gap: 20px;
             align-items: center;
         }
-        .logo{
-                        
-        }
-        .heading_info{
+        .menu{
             display: flex;
-            flex-grow: 1;
-            gap: 50px;
-            justify-content: center            
+            gap: 40px;
         }
-        .icons{
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-grow: 1;
-            font-size: 20px;
-        }
-        a{
+        .a1{
             text-decoration: none;
-            font-size: 20px;
+            color: rgb(74, 72, 72);
+            font-weight: bold;
+        }
+        .a1:hover{
+            color: black;
+        }
+        .h2{
+            display: flex;
+            height: 87vh;
+            background-color: #376fd1f6;
+            
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%239C92AC' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .social_links{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .is{
+            
+            color: white;
+            border: 2px  solid white;
+            border-bottom: 1px; 
+             
+            padding: 15px;
+           
+        }
+        .name{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            
+        }
+        .get_me{
+            display: flex;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+        .getme{
+
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: flex-start;
+            color:black;
+            font-weight: bold;
+            font-size: 25px;
+            
+            
+        }
+        .myskills{
+            flex: 1;
             color: black;
             font-weight: bold;
-            font-family: Arial, sans-serif;
+            font-size: 25px;
+            font-weight: bold;
+            margin-left: 20px;
+            
         }
-        a:hover{
-            color: rgba(48, 45, 45, 0.895);
+        .skills{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 8%;
+            gap: 15px;
         }
-        .img1{
-            height: 75vh;
-            width: 100vw;
+        .about{
+            padding-top:60px;
+            padding-bottom: 60px;
         }
-       .customer_fav{
-        display: flex;
-        margin-top: 70px;
-        margin-left: 35px;
-        flex-direction: column;
-       }
-       .sub_head{
-        display: flex;
-        gap: 780px;
-        
-        
-        align-items: center;
-       }
-       .sub_head2{
-        background-color: rgb(248, 192, 39);
-        ;
-        
-       }
-       .i1{
-        background-color: rgba(19, 2, 2, 0.048);
-        
-       }
-       .sub_head2:hover{
-        text-decoration: underline;
-        .i1
-       {
-        background-color: black;
-        color: white;
-       }
-       }
-       .products{
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 35px;
-        
-       }
-       .pro_des{
-        padding: 5px;
-        margin: 10px;
-       
-       }
-       .pro_imgs{
-        height: 32vh;
-        width: 22vw;
-        border-radius: 5px;
-        
-       }
-       .Explore_Collections{
-        margin-top: 130px;
-        
-        background-color: rgb(6, 88, 6);
-        height: 80vh;
-       }
-       .ecs{
-        height: 32vh;
-        width: 22vw;
-        
-       }
-       .EC3{
-        
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-evenly;
-       }
-       .adds2{
-        display: flex;
-        margin-top: 90px;
-        margin-left: 50px ;
+        .project{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 10%;
+        }
+        .subpro{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .pro1{
+            display: flex;
 
-       }
-       .ad1{
-        display: flex;
-        flex-grow: 1;
-        flex-direction: column;
-        gap: 20px;
-       }
-       .ad2{
-        display: flex;
-        flex-grow: 1;
-       }
-       .adimg{
-        height: 36vh;
-        width: 48vw;
-        border-radius: 10px;
-       }
-       .adimg2{
-        height: 75vh;
-        width: 43vw;
-        border-radius: 10px;
-       }
-       .gheeinfo{
-        display: flex;
-        margin-top: 90px;
-        height: 70vh;
-       }
-       .ghee_img{
-        flex-grow:1;
-
-       }
-       .ghee_content{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 8;
-        text-align: center;
-        margin: 20px;
-        align-items: center;
-       }
-       .bag{
-        display: flex;
-        gap: 50px;
-       }
-       .bag_img{
+        }
         
-        margin-left: 35px;
-       }
-       .product_cost{
-        flex-grow: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-       }
-      
-    </style>
+        .pro2{
+            display: flex;
+        }
+        .pro3{
+            display: flex;
+        }
+        .img{
+            flex: 1;
+            
+            
+        }
+        .pro_content{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        img{
+            height: 90%;
+            width: 90%;
+        }
+        .Contacts{
+            display: flex;
+            flex-direction: column;
+            background-color: #376fd1f6;
+        
+            
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zm20.97 0l9.315 9.314-1.414 1.414L34.828 0h2.83zM22.344 0L13.03 9.314l1.414 1.414L25.172 0h-2.83zM32 0l12.142 12.142-1.414 1.414L30 .828 17.272 13.556l-1.414-1.414L28 0h4zM.284 0l28 28-1.414 1.414L0 2.544V0h.284zM0 5.373l25.456 25.455-1.414 1.415L0 8.2V5.374zm0 5.656l22.627 22.627-1.414 1.414L0 13.86v-2.83zm0 5.656l19.8 19.8-1.415 1.413L0 19.514v-2.83zm0 5.657l16.97 16.97-1.414 1.415L0 25.172v-2.83zM0 28l14.142 14.142-1.414 1.414L0 30.828V28zm0 5.657L11.314 44.97 9.9 46.386l-9.9-9.9v-2.828zm0 5.657L8.485 47.8 7.07 49.212 0 42.143v-2.83zm0 5.657l5.657 5.657-1.414 1.415L0 47.8v-2.83zm0 5.657l2.828 2.83-1.414 1.413L0 53.456v-2.83zM54.627 60L30 35.373 5.373 60H8.2L30 38.2 51.8 60h2.827zm-5.656 0L30 41.03 11.03 60h2.828L30 43.858 46.142 60h2.83zm-5.656 0L30 46.686 16.686 60h2.83L30 49.515 40.485 60h2.83zm-5.657 0L30 52.343 22.343 60h2.83L30 55.172 34.828 60h2.83zM32 60l-2-2-2 2h4zM59.716 0l-28 28 1.414 1.414L60 2.544V0h-.284zM60 5.373L34.544 30.828l1.414 1.415L60 8.2V5.374zm0 5.656L37.373 33.656l1.414 1.414L60 13.86v-2.83zm0 5.656l-19.8 19.8 1.415 1.413L60 19.514v-2.83zm0 5.657l-16.97 16.97 1.414 1.415L60 25.172v-2.83zM60 28L45.858 42.142l1.414 1.414L60 30.828V28zm0 5.657L48.686 44.97l1.415 1.415 9.9-9.9v-2.828zm0 5.657L51.515 47.8l1.414 1.413 7.07-7.07v-2.83zm0 5.657l-5.657 5.657 1.414 1.415L60 47.8v-2.83zm0 5.657l-2.828 2.83 1.414 1.413L60 53.456v-2.83zM39.9 16.385l1.414-1.414L30 3.658 18.686 14.97l1.415 1.415 9.9-9.9 9.9 9.9zm-2.83 2.828l1.415-1.414L30 9.313 21.515 17.8l1.414 1.413 7.07-7.07 7.07 7.07zm-2.827 2.83l1.414-1.416L30 14.97l-5.657 5.657 1.414 1.415L30 17.8l4.243 4.242zm-2.83 2.827l1.415-1.414L30 20.626l-2.828 2.83 1.414 1.414L30 23.456l1.414 1.414zM56.87 59.414L58.284 58 30 29.716 1.716 58l1.414 1.414L30 32.544l26.87 26.87z' fill='%239C92AC' fill-opacity='0.19' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .form{
+            padding: 30px;
+            margin-bottom: 10%;
+            width: 40%;
+            height: 85vh;
+            border-radius: 5px;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            padding: 90px 60px
+        }
+        i{
+            color: white;           
+        }
+        .links{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        @media(max-width:600px){
+            .menu{
+                display: none;
+            }
+            .social_links{
+                display: none;
+            }
+        }
+        </style>
 </head>
 <body>
-    <!--Parent-->
-  <div class="parent">
-        <!--Heading1-->
-            <div class="heading1" 
-                style="border-bottom: 1px solid white; 
-                text-align: center; 
-                font-weight: bold; 
-                padding: 10px; 
-                font-size: 20px;
-                background-color: rgba(1, 105, 1, 0.966); 
-                color: white;
-                font-family: Arial, sans-serif;">
-                Welcome
+    <div class="parent">
+        <!--Header menu-->
+        <div class="header">
+            <div class="profile_pic">
+                <img src="Passport_photo.jpg" alt="Passport_photo" style="border-radius: 50%;height: 50px;width: 50px;">
+                <div style="font-size: 25px;font-weight: bold;color:rgb(74, 72, 72);">Pavan</div>
             </div>
-        <!--Heading2-->
-            <div class="heading2" style="background-color:rgb(248, 192, 39); ">
+            <div class="menu">
+                <a href="#" class="a1">HOME</a>
+                <a href="#" class="a1">ABOUT</a>
+                <a href="#" class="a1">PROJECTS</a>
+                <a href="#" class="a1">CONTACT</a>
+            </div>
+        </div>
 
-                <!--Heading2 insiders-->
-                <div class="logo">
-                    <img src="//vaaradhifarms.com/cdn/shop/files/Asset_1_2x_399eef15-89ca-42cd-ac92-8f75b5e60552.png?v=1685440038&amp;width=1330" alt="" height="100px" height="90px"class = "image1" style="padding-left: 50px;padding-top: 25px;padding-bottom: 25px;padding-right: 25px;">
+        <!--name header-->
+        <div class="h2">
+            <div class="social_links" style= " font-size: 40px;">
+                <a href="https://linkedin.com/in/pavanvodnala976" target="_blank"><i class="fa fa-linkedin is" style= " font-size: 40px; "></i></a>
+                <a href="https://github.com/pavanvodnala" target="_blank"><i class="fa fa-github is"  style= " font-size: 40px;"></i></a>
+                <a href="#"><i class="fa fa-twitter is"  style= " font-size: 36.8px;"></i></a>
+                <a href="#"><i class="fa fa-youtube-play is" style= " font-size: 34.3px;" ></i></a>
+                <a href="#"><i class="fa fa-instagram is" style= " font-size: 40px; border-bottom: 2px solid white;"></i></a>
+            </div>
+            <div class="name">
+                <h1 style="color: white; font-size: 70px;margin-top: 180px;margin-bottom: 0px;">
+                    Hey, My name is Pavan
+                </h1>
+                <div class="description">
+                    <p style="color: white; text-align: center;font-size: 25px;margin-bottom: 50px;">Aspiring software developer with a passion for building innovative applications and strong problem-solving skills. Seeking an opportunity to contribute to impactful projects and grow in a dynamic organization.</p>
                 </div>
-                <div class="heading_info" >
-                    <a href="#">Home</a>
-                    <a href="#">View Collections  <i class="fa-solid fa-angle-down"></i></a>
-                    <a href="#">Shop All</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Track Your Order</a>
-                    <a href="#">Contact Us</a>
-
+                <div class="project_button">
+                    <div style="border: 1px solid white; text-align: center;padding:15px 40px; font-weight: bold;color: rgb(40, 37, 37);font-size: 30px;background-color: white;border-radius: 5px;">Projects</div>
                 </div>
-                <div class="icons" >
-                    <i class="fa fa-magnifying-glass" style=" color: black; opacity: 0.7;"></i>
-                    <i class="fa-regular fa-user" ></i>
-                    <i class="fa fa-basket-shopping" style=" color: black; opacity: 0.7;"></i>
+                <div class="animation" style="font-weight: bold;font-size: 30px;border: 2px solid white;border-radius: 35%;width: 30px;height: 50px;margin-top: 10%;color: white;">
+                    <marquee behavior="" direction="down" style="text-align: center;">.</marquee> 
                 </div>
             </div>
-            <!--Product Adds-->
-            <div class="adds">
+        </div>
+
+        <!--About-->
+        <div class="about" style="text-align: center;background-color: rgba(128, 128, 128, 0.053);">
+            <div>
+                <h1>ABOUT ME</h1>
+                <div style="border: 1px ; width: 40px;margin-left: 49%;height: 6px;background-color: #376fd1f6; border-radius: 20px;"></div>
+            </div>
+            <p style="color: gray; text-align: center;font-size: 25px;margin-bottom: 50px; padding-left: 40px;">Aspiring software developer with a passion for building innovative applications and strong problem-solving skills. Seeking an opportunity to contribute to impactful projects and grow in a dynamic organization.</p>
+
+            <div class="get_me">
+                
+                <div class="getme">
+                    <div>Get to know me!</div>
+                    <div style="color: gray;text-align: left;font-weight: normal;">
+                        Motivated and detail-oriented Computer Science graduate with a strong foundation in web development and problem-solving. Passionate about building efficient software solutions and eager to learn new technologies. Seeking an opportunity to contribute and grow in a dynamic tech environment.Feel free to contact me here.
+
+                    </div>
+                    <div style="background-color:#376fd1f6 ;color: white;font-weight: bold;;text-align: center;padding: 15px 35px;border-radius: 5px;">Contact</div>
+                </div>
+                <div class="myskills">
+                    <div>My Skills</div>
+                    <div class="skills"> 
+                        
+                        <div style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px; color: gray;">HTML</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">CSS</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">Java</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">C</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">Python</div>
+                        <div style="background-color:lightgrey ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">C++</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">Flutter</div>
+                        <div style="background-color:lightgrey  ;font-weight: normal;text-align: center;padding: 15px;border-radius: 5px; font-size: 20px;color: gray;">Figma</div>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Projects-->
+        <div class="project" style="text-align: center;"">
+            <div><h1>PROJECTS</h1>
+                <div style="border: 1px ; width: 40px;margin-left: 49%;height: 6px;background-color: #376fd1f6; border-radius: 20px;"></div>
+                <p style="color: gray; text-align: center;font-size: 25px;margin-bottom: 50px; padding-left: 60px;padding-right: 50px;">
+                    This section showcases three distinct projects that highlight my journey through innovation, technical prowess, and creative problem-solving. Each project reflects a unique challenge tackled with passion and precision, offering a glimpse into my dynamic skill set.
+                </p>
+            </div>
+            <div class="subpro">
+                <div class="pro1">
+                        <div class="img">
+                            <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" alt="">
+                        </div>
+                        <div class="pro_content">
+                            <div style="text-align: left;font-weight: bold;font-size: 30px;">   project 1</div>
+                            <p style="color: gray; text-align: left;font-size: 25px;margin-bottom: 50px; padding-left: 60px;padding-right: 50px;">Developed an innovative feature selection algorithm leveraging machine learning to accurately predict student academic performance.
+                            </p>
+                            <div style="background-color:#376fd1f6 ;color: white;font-weight: bold;;text-align: center;padding: 15px 15px;border-radius: 5px;width: 20%;margin-left: 35%;">Case Study</div>
+                        </div>
+                </div>
+                <div class="pro2">
+                    
+                        <div class="img">
+                            <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" alt=""> 
+                        </div>
+                    <div class="pro_content">
+                        <div style="text-align: left;font-weight: bold;font-size: 30px;">   project 2</div>
+                        <p style="color: gray; text-align: left;font-size: 25px;margin-bottom: 50px; padding-left: 60px;padding-right: 50px;">Developed a Flask-based weather application delivering real-time forecasts and interactive weather insights
+                        </p>
+                        <div style="background-color:#376fd1f6 ;color: white;font-weight: bold;;text-align: center;padding: 15px 15px;border-radius: 5px;width: 20%;margin-left: 35%;">Case Study</div>
+                    </div>
+                </div>
+                <div class="pro3">
+                    <div class="img"> 
+                        <img src="https://excelrfs.netlify.app/assets/jpeg/project-mockup-example.jpeg" alt="" >
+                    </div>
+                    <div class="pro_content">
+                        <div style="text-align: left;font-weight: bold;font-size: 30px;">   project 3</div>
+                        <p style="color: gray; text-align: left;font-size: 25px;margin-bottom: 50px; padding-left: 60px;padding-right: 50px;">Engineered a predictive model leveraging the comprehensive New York taxi dataset to accurately forecast fare prices based on diverse trip variables.
+                        </p>
+                        <div style="background-color:#376fd1f6 ;color: white;font-weight: bold;;text-align: center;padding: 15px 15px;border-radius: 5px;width: 20%;margin-left: 35%;">Case Study</div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <!--Contacts-->
+        <div class="Contacts">
+            <div class="name">
+                <h1 style="color: white; font-size: 50px;margin-top: 120px;margin-bottom: 0px;">
+                        CONTACT
+                </h1>
+                <div style="border: 1px ; width: 40px;height: 6px;background-color: white; border-radius: 20px;"></div>
+                <div class="contact_Des">
+                    <p style="color: white; text-align: center;font-size: 25px;margin-bottom: 50px;">Aspiring software developer with a passion for building Connect with me to spark new ideas and collaborative opportunities.</p>
+                </div>
+                <div class="form" style="border: 1px solid white; background-color: white; ">
+                    <h4 style="color: grey;">
+                        Name
+                    </h4>
+                    <form name="RegForm">
+                        <input type="text" placeholder="Enter Your Name" style="background-color: rgba(211, 211, 211, 0.548);border: none;border-radius: 7px;padding: 20px;width: 100%;font-weight:bold;font-family: 'Times New Roman', Times, serif;">
+                        <h4 style="color: grey;">
+                            Email
+                        </h4>
+                        <input type="email" placeholder="Enter Your Email" style="background-color: rgba(211, 211, 211, 0.548);border: none;border-radius: 7px;padding: 20px;width: 100%;font-weight:bold;font-family: 'Times New Roman', Times, serif;">
+                        <h4 style="color: grey;">
+                            Message
+                        </h4>
+                        <textarea name="message" rows="15" cols="50" placeholder="Enter Yor Message" style="background-color: rgba(211, 211, 211, 0.548);border: none;border-radius: 7px;padding: 20px;width: 100%;font-weight:bolder;font-family: 'Times New Roman', Times, serif;"></textarea>
+                        <input type="submit" style="background-color:#376fd1f6 ;color: white;font-weight: bold;;text-align: center;padding: 15px 55px;border-radius: 5px;border: none;margin-top: 15px;float: right;">
+                    </form>
+                </div>
+        
+            </div>
+        </div>   
+
+        <!--Footer-->
+        <div class="footer">
+            
+            <div class="salutation">
+                <h1 style="color: white; font-size: 30px;margin-top: 20px;margin-bottom: 0px;">
+                    Pavan
+                </h1>
+                <div class="description">
+                    <p style="color: white; text-align: center;font-size: 20px;margin-bottom: 50px;"> A Aspiring software developer </p>
+                </div>
+            </div>
+
+            <div class="links" style= " font-size: 20px;">
+                <h1 style="color: white; font-size: 30px;margin-top: 20px;margin-bottom: 0px;">Social</h1>
                 <div>
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/varadhi_farms_ghee_-v1_-_web_final.jpg?v=1733085382&width=3200" alt="" class="img1" >
-                </div> 
-            </div>
-            <!--customer fav-->
-            <div class="customer_fav">
-                <div class="main_head"> <h1 style="font-size: 50px;font-family: Arial, sans-serif">Shop Our Customer Favorites</h1></div>
-                <div class="sub_head" style="font-size: 20px;">These are Our Best Sellers You’ll Fall in Love With Too
-                    <a href="#"   class="sub_head2" style="font-size: 20px; border: 1px ; width: 8%;text-align: center;padding: 15px;border-radius: 30px;"> View All <i class="fa-solid fa-angle-right i1" style="border: 1px solid gray;border-radius:50%; padding: 2px; font-size: 15px;width: 15px;"></i></a>
-                    
+                <i class="fa fa-linkedin" style= " font-size: 20px;"></i>
+                <i class="fa fa-github"  style= " font-size: 20px;"></i>
+                <i class="fa fa-twitter"  style= " font-size: 20px;"></i>
+                <i class="fa fa-youtube-play" style= " font-size: 20px;" ></i>
+                <i class="fa fa-instagram " style= " font-size: 20px; "></i>
                 </div>
             </div>
-            <!--Products-->
-            <div class="products">
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Ghee_HighRes.jpg?v=1698928244&width=1800" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>A2 Desi Cow Cultured Ghee</h3>
-                        <div class="product-price" style="color: red;">
-                        From Rs. 925.00 <strike style="color:black;">Rs. 1000.00</strike>
-                        </div>
-                        <div class="product-reviews">
-                            615 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>   
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Honey2.png?v=1698854744&width=1800" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Farm Fresh Raw Natural Honey</h3>
-                        <div class="product-price">
-                            From Rs. 475.00 
-                        </div>
-                        <div class="product-reviews">
-                            2119 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/WhatsAppImage2024-04-26at1.21.52AM.jpg?v=1714074796&width=1200" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Wild Raw Forest Honey</h3>
-                        <div class="product-price">
-                        From Rs. 575.00 
-                        </div>
-                        <div class="product-reviews">
-                            505 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/WhatsAppImage2024-03-26at7.23.32PM.jpg?v=1711461650&width=1000" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Small bee forest honey</h3>
-                        <div class="product-price">
-                        From Rs. 1249.00 
-                        </div>
-                        <div class="product-reviews">
-                            74 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/deepixelstudios_wild_turmeric_powder_in_a_pouch_1080x1080_a5f1c16c-5f91-4fc1-b586-b6b292eb5c21.png?v=1714064248&width=1000" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Forest Turmeric Powder</h3>
-                        <div class="product-price">
-                        From Rs. 300.00 
-                        </div>
-                        <div class="product-reviews">
-                            18 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-
-                                
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Adityark_a_bag_of_a_tan_colored_product_filled_with_turmeric_ki_30bdb482-db0c-4404-8b6c-cb59bec40502.png?v=1685016262&width=1000" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Unprocessed Natural Turmeric</h3>
-                        <div class="product-price">
-                        From Rs. 199.00
-                        </div>
-                        <div class="product-reviews">
-                            315 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/WhatsApp_Image_2024-09-24_at_11.20.47_PM.jpg?v=1727416947&width=1000" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Lakshman Phal Juice</h3>
-                        <div class="product-price">
-                        From Rs. 780.00 
-                        </div>
-                        <div class="product-reviews">
-                            125 reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <div class="pro_des">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/42bellampowder.png?v=1730945058&width=1800" alt="" class="pro_imgs">
-                    <div class="product-info" style="text-align: center;">
-                        <h3>Jaggery Powder</h3>
-                        <div class="product-price">
-                        From Rs. 160.00 
-                        </div>
-                        <div class="product-reviews">
-                            17reviews
-                            <span class="stars" style="color: gold;">★</span>
-                        </div>
-                    </div>
-                </div>         
-            </div>
-
-            <!--View all Products button-->
-
-            <div class="vap" style="text-align: center;margin-top: 80px;"> 
-                <a href="#" style="border: 1px solid; background-color:rgb(248, 192, 39) ;padding-top : 20px; padding-bottom: 20px;padding-left: 35px;padding-right: 35px; border-radius: 50px;font-size: 16px; font-family: 'Times New Roman', Times, serif;">View All Products</a>
-            </div>
-
-            <!--Explore Collections-->
-
-            <div class="Explore_Collections">
-                <div class="EC1">
-                    <h1 style="font-size: 50px;color: white;padding-left: 40px ;font-family: Arial, Helvetica, sans-serif;">Explore Our Collections</h1>
-                </div>
-                <div class="EC2" style="padding-left: 40px;color: white;font-size: large;">
-                    Find Your Favorites From Our Wide Range of Categories
-                </div>
-                <!-- EC Images-->
-                <div class="EC3">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/vaaradhi_farms.jpg?v=1733113339&width=1600" alt="" class="ecs">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/ecommified_Front-facing_close-up_eye-level_shot_of_a_plain_flat_22ecbd0e-a868-400f-851a-1b171609766c.png?v=1732686759&width=1600" alt="" class="ecs">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/pickle_collection_image_-_v1.png?v=1732697129&width=1000" alt="" class="ecs">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/sweet_and_snacks.jpg?v=1732699427&width=1600" alt="" class="ecs">
-                </div>
-
-                <!--View All Collection's button-->
-                <div class="ecv" style="text-align: center;margin-top: 60px;"> 
-                    <a href="#" style="border: 1px solid; background-color:rgb(248, 192, 39) ;padding-top : 20px; padding-bottom: 20px;padding-left: 35px;padding-right: 35px; border-radius: 50px;font-size: 16px; font-family: 'Times New Roman', Times, serif;">View All Collection's</a>
-                </div>
-            </div>
-
-            <!--Again Adds-->
-            <div class="adds2">
-                <div class="ad1">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/sweetner_and_salts_collection_image_varadhi_farms.jpg?v=1733114639&width=2000" alt="" class="adimg">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/seeds_collection_image_varadhi_farms-1.jpg?v=1733116981&width=2000" alt="" class="adimg">
-
-                </div>
-                <div class="ad2">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Varadhi_farms_v1_oil_section_image-3.jpg?v=1733085809&width=2000" alt="" class="adimg2">
-
-                </div>
-            </div>
-            <!--offers add-->
-            <div class="offers" style="border: 1px solid; margin-top: 90px;background-color: rgba(1, 105, 1, 0.966);padding: 40px;color: white; font-size: 30px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;text-align: center;">
-                <marquee behavior="alternate" scrollamount="10" direction="left" style="display: inline-block;">Free Shipping On Orders Above 999 </marquee>
-                
-            </div>
-            <<!--Ghee info-->
-            <div class="gheeinfo" style="padding: 40px;">
-                
-                <div class="ghee_img" >
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Ghee_HighRes.jpg?v=1698928244&width=1800" alt="" style="height: 60vh;width: 22vw; border-radius: 20px;">
-                </div>
-                <div class="ghee_content" >
-                    <div style="font-size: 40px; font-family: geometric sans-serif;font-weight: bolder;; margin-bottom: 20px;">Did You Know?</div>
-                    <div style="font-size:200px; font-family:  geometric sans-seriff;font-weight: bolder;">90%</div>
-                    <div style="font-size: 30px; font-family:  geometric sans-serif;font-weight: bolder; margin-top: 20px;">of Honey and Ghee’s use is to Enhance Meals.</div>
-
-                </div>
-                <div class="ghee_img" style="text-align: end;">
-                    <img src="https://vaaradhifarms.com/cdn/shop/files/Honey2.png?v=1698854744&width=1800" alt="" style=" height: 60vh;width: 22vw; border-radius: 20px;"> 
-                </div>
-            </div>
-
-            <!--Bag-->
-            <div class="bag">
-                <div class="bag_img">
-                    <img src="bag.png" alt="" style="border-radius: 20px;">
-                </div>
-                <div class="product_cost">
-                    <div style="font-size: 40px;font-weight: bold;">
-                        Product
-                    </div>
-                    <div>
-                        Rs. 40.00
-                    </div>
-                    <div><hr></div>
-                    <div style="color: gray;font-size: 20px;">
-                        Quantity:
-                    </div>
-                    <div style="border: 1px solid gray;border-radius: 30px;width: 20%;text-align: center; display: flex; justify-content: space-evenly;;align-items: center;" >
-                        <div style="font-size: 40px;padding-bottom: 2px;">-</div>
-                        <div style="font-size: 30px; text-align: center; padding: 4px;">0</div>
-                        <div style="font-size: 40px;">+</div>
-                    </div>
-                    <div style="border: 1px solid;padding: 10px;background-color:rgba(1, 105, 1, 0.966);text-align: center ;border-radius: 30px;font-weight: bold;color: white;font-size: 20px;">Add To Cart</div>
-                    
-                </div>
-
-            </div>
-
-
-    </div>  
+        </div>
+    </div>   
 </body>
 </html>
